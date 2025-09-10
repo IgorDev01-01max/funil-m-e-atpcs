@@ -110,6 +110,6 @@ function showNotification(message) {
 
 function leadCTA() {
   // Pode ser link para WhatsApp ou Calendly
-  window.open("https://wa.me/5599999999999?text=Olá,+quero+agendar+meu+1x1", "_blank");
+  window.open("https://wa.me/5571920012492?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20produto.", "_blank");
 }
 
