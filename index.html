@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidar+</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2504627543233584');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2504627543233584&ev=PageView&noscript=1"
+/></noscript>
+</head>
+
+<body>
+    <!-- Navbar fixa no topo -->
+    <header class="navbar">
+
+        <button onclick="goTo('dashboard')">🏠 Início</button>
+        <button onclick="goTo('quiz')">🎯 Quiz</button>
+        <button onclick="goTo('habits')">✅ Hábitos</button>
+        <button onclick="goTo('care')">💖 Cuidados</button>
+        <button onclick="goTo('tips')">💡 Dicas</button>
+        <button onclick="goTo('extra')">📘 E-book-Instruções</button>
+        <button class="jogos"><a href="https://gamefono.netlify.app/">🪂 Jogos interativos🎨🦚</a></button>
+    </header>
+
+    <!-- Onboarding -->
+ <img src="./assets/atpc capa.jpg" class="cover" alt="">
+    <section id="onboarding" class="screen active">
+        <div class="container">
+            <h1>Bem-vinda ao <span class="logo">Cuidar+</span></h1>
+            <p>Um app simples para apoiar mães atípicas com hábitos, cuidados e dicas.</p>
+            <button class="comecar" onclick="goTo('dashboard')">Começar 🚀</button>
+        </div>
+    </section>
+
+
+    <!-- Quiz -->
+    <section id="quiz" class="screen">
+        <div class="container">
+            <h2>Quiz do Dia 🎯</h2>
+            <div id="quiz-card" class="card">
+                <p id="quiz-question">Seu filho dormiu bem ontem?</p>
+                <div class="quiz-options">
+                    <button onclick="answerQuiz(0)">Sim</button>
+                    <button onclick="answerQuiz(1)">Não</button>
+                </div>
+            </div>
+            <div id="quiz-result" class="card" style="display:none;"></div>
+        </div>
+        <button class="habitts" onclick="goTo('habits')">✅ Hábitos</button>
+        <button  class="contact" onclick="leadCTA()">👉 Entre em Contato Conosco</button>
+    </section>
+
+    <!-- Notificação dinâmica -->
+    <div id="notification" class="notification"></div>
+
+
+    <!-- Dashboard com carrossel -->
+    <section id="dashboard" class="screen">
+        <div class="container">
+            <h2>Olá Mãe 🤗💞🤱</h2>
+            <p class="subtitle">Veja as novidades de hoje</p>
+            <p>Preencha sua Quiz do Dia 🎯</p>
+            <p><span class="spn">🎁Ganhe um bônus App Terapêutico 🤗!</span></p>
+            <button class="quekiz" onclick="goTo('quiz')">🎯 Quiz</button>
+            <p>Compartilhe como foi o dia do seu filho e suas principais preocupações.</p>
+
+
+            <!-- Carrossel -->
+            <div class="carousel">
+                <div class="slides">
+                    <img src="./assets/atipic1.jpg" alt="Imagem 1">
+                    <img src="./assets/atipic2.jpg" alt="Imagem 2">
+                    <img src="./assets/atipic3.jpg" alt="Imagem 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hábitos -->
+    <section id="habits" class="screen">
+        <div class="container">
+            <h2>✅ Hábitos do Dia</h2>
+            <ul id="habit-list">
+                <li onclick="toggleHabit(this)">💧 Beber água</li>
+                <li onclick="toggleHabit(this)">💤 Momento de descanso</li>
+                <li onclick="toggleHabit(this)">🎶 Atividade sensorial</li>
+                <li onclick="toggleHabit(this)">🤝 Interação social</li>
+                <li onclick="toggleHabit(this)">📖 Ler uma história</li>
+                <li onclick="toggleHabit(this)">🧩 Brincar com quebra-cabeça</li>
+                <li onclick="toggleHabit(this)">🌳 Passeio ao ar livre</li>
+            </ul>
+        </div>
+
+        <!-- Bloqueio Premium -->
+        <div class="locked card">
+            <h3>🔒 Conteúdo Premium</h3>
+            <p>Para acessar <strong>Cuidados, Dicas e Instruções Extras</strong>, desbloqueie o App Completo.</p>
+
+            <!-- Botão CTA -->
+            <button onclick="leadCTA()">👉 Entre em Contato Conosco</button>
+
+            <!-- Link de Pagamento -->
+            <p style="margin-top:10px; border: solid 1px rgb(16, 156, 236); box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1); border-radius: 5px; margin-bottom: 8px;" >
+                <a href="https://seulinkdepagamento.com" target="_blank" class="pay-link" style="font-size: 18px; padding: 2px;">
+                    💳 Obtenha o Melhor Plano App.
+                </a>
+            </p>
+            <p>Ou entre em contato para mais informações!</p>
+        </div>
+
+    </section>
+
+    <!-- Cuidados -->
+    <section id="care" class="screen">
+        <div class="container">
+            <h2>💖 Cuidados Rápidos</h2>
+            <!--   <div class="card fade-in">
+        <h3>🛁 Higiene</h3>
+        <p>Banho relaxante ajuda no sono e no bem-estar.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>🥗 Alimentação</h3>
+        <p>Ofereça alimentos coloridos para estimular o apetite.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>🧘 Respiração</h3>
+        <p>Pratique exercícios respiratórios simples com a criança.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>💤 Sono</h3>
+        <p>Ambiente escuro e silencioso ajuda no descanso.</p>
+      </div>  -->
+        </div>
+         <!-- Bloqueio Premium -->
+        <div class="locked card">
+            <h3>🔒 Conteúdo Premium</h3>
+            <p>Para acessar <strong>Cuidados, Dicas e Instruções Extras</strong>, desbloqueie o App Completo.</p>
+
+            <!-- Botão CTA -->
+            <button onclick="leadCTA()">👉 Entre em Contato Conosco</button>
+
+            <!-- Link de Pagamento -->
+            <p style="margin-top:10px; border: solid 1px rgb(16, 156, 236); box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1); border-radius: 5px; margin-bottom: 8px;" >
+                <a href="https://seulinkdepagamento.com" target="_blank" class="pay-link" style="font-size: 18px; padding: 2px;">
+                    💳 Obtenha o Melhor Plano App.
+                </a>
+            </p>
+            <p>Ou entre em contato para mais informações!</p>
+        </div>
+    </section>
+
+    <!-- Dicas -->
+    <section id="tips" class="screen">
+        <div class="container">
+            <h2>💡 Dica do Dia</h2>
+
+            <!-- <div class="card fade-in">
+        <p>Brincar com bolhas de sabão ajuda na coordenação visual e atenção.</p>
+      </div>
+      <div class="card fade-in">
+        <p>Utilizar músicas infantis pode estimular linguagem e memória.</p>
+      </div>
+      <div class="card fade-in">
+        <p>Monte uma rotina visual com desenhos para facilitar entendimento.</p>
+      </div> -->
+        </div>
+         <!-- Bloqueio Premium -->
+        <div class="locked card">
+            <h3>🔒 Conteúdo Premium</h3>
+            <p>Para acessar <strong>Cuidados, Dicas e Instruções Extras</strong>, desbloqueie o App Completo.</p>
+
+            <!-- Botão CTA -->
+            <button onclick="leadCTA()">👉 Entre em Contato Conosco</button>
+
+            <!-- Link de Pagamento -->
+           <p style="margin-top:10px; border: solid 1px rgb(16, 156, 236); box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1); border-radius: 5px; margin-bottom: 8px;" >
+                <a href="https://seulinkdepagamento.com" target="_blank" class="pay-link" style="font-size: 18px; padding: 2px;">
+                    💳 Obtenha o Melhor Plano App.
+                </a>
+            </p>
+            <p>Ou entre em contato para mais informações!</p>
+        </div>
+    </section>
+
+    <!-- Instruções Extras -->
+
+    <section id="extra" class="screen">
+        <div class="container">
+            <h2>📘 Instruções Extras</h2>
+            <!-- <div class="card fade-in">
+        <h3>📅 Organização</h3>
+        <p>Crie um planner semanal para os cuidados e atividades.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>⏰ Alertas</h3>
+        <p>Configure lembretes para não esquecer dos hábitos importantes.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>🧑‍🤝‍🧑 Rede de Apoio</h3>
+        <p>Compartilhe tarefas com familiares para não sobrecarregar-se.</p>
+      </div> -->
+        </div>
+         <!-- Bloqueio Premium -->
+        <div class="locked card">
+            <h3>🔒 Conteúdo Premium</h3>
+            <p>Para acessar <strong>Cuidados, Dicas e Instruções Extras</strong>, desbloqueie o App Completo.</p>
+
+            <!-- Botão CTA -->
+            <button onclick="leadCTA()">👉 Entre em Contato Conosco</button>
+
+            <!-- Link de Pagamento -->
+            <p style="margin-top:10px; text-decoration: none; list-style: none; border: solid 1px rgb(16, 156, 236); box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.1); border-radius: 5px; margin-bottom: 8px;" >
+                <a href="https://seulinkdepagamento.com" target="_blank" class="pay-link" style="font-size: 18px; padding: 2px;">
+                    💳 Obtenha o Melhor Plano App.
+                </a>
+            </p>
+            <p>Ou entre em contato para mais informações!</p>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
