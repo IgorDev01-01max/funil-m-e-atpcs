@@ -15,7 +15,7 @@ function showNotification(message) {
 
   setTimeout(() => {
     notification.style.display = "none";
-  }, 4000);
+  }, 5000);
 }
 
 function goTo(screen) {
@@ -31,18 +31,18 @@ function toggleHabit(element) {
 // Perguntas e respostas do funil
 const quizData = [
   {
-    question: "Seu filho dormiu bem ontem?",
+    question: "Seu filho(a) dormiu bem ontem?",
     options: ["Sim", "Não"],
     messages: ["Ótimo! Continue mantendo a rotina 💤", "Tente uma atividade relaxante antes de dormir 🛌"]
   },
   {
-    question: "Ele se alimentou bem hoje?",
+    question: "Ele(a) se alimentou bem hoje?",
     options: ["Sim", "Não"],
     messages: ["Excelente! Reforce refeições coloridas 🥗", "Experimente lanches saudáveis 🍎"]
   },
 
     {
-    question: "Qual sua maior dificuldade em lidar com seu filho?",
+    question: "Qual sua maior dificuldade em lidar com seu filho(a)?",
     options: ["Comportamento", "Alimentação", "Sono"],
     messages: ["Entendo, o comportamento pode ser desafiador. Vamos trabalhar nisso!", "A alimentação é fundamental. Que tal algumas dicas?", "O sono é crucial. Vamos explorar soluções juntos?"]
   }
