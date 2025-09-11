@@ -88,7 +88,10 @@ function showResult() {
 }
 
 
+addEventListener("click", function(){
+  document.getElementById("som-notificacao").play().volume = 0.5;
 
+});
 
 // CTA Final (pode ser redirecionamento para página de venda)
 function leadCTA() {
