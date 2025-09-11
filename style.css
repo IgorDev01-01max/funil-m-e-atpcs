@@ -302,8 +302,8 @@ ul li.done {
 }
 
 .contact {
-  margin: 15px 0 0 25%;
-  padding: 6px 10px;
+  margin: 15px 0 0 26%;
+  padding: 6px 20px;
   border-radius: 10px;
   box-shadow: 2px 5px 20px 6px rgb(62, 188, 226);
   background-color: rgb(56, 6, 138);
@@ -347,7 +347,7 @@ ul li.done {
   font-weight: bold;
   justify-content: center;
   align-items: center;
-  margin-left: 33%;
+  margin-left: 30%;
   margin-top: 25px;
   padding: 4px 45px;
   background-color: rgb(56, 6, 138);

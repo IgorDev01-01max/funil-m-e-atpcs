@@ -93,7 +93,7 @@ function showResult() {
 // CTA Final (pode ser redirecionamento para página de venda)
 function leadCTA() {
   alert("Redirecionando para agendamento do x1...");
-  // window.location.href = "link-da-oferta";
+   window.location.href = "https://cuidarmaisonline.netlify.app/#pricing";
 }
 
 // Notificação CTA
@@ -110,6 +110,6 @@ function showNotification(message) {
 
 function leadCTA() {
   // Pode ser link para WhatsApp ou Calendly
-  window.open("https://wa.me/5571920012492?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20produto.", "_blank");
+  window.open("https://cuidarmaisonline.netlify.app/#pricing", "_blank");
 }
 
